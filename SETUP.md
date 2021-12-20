@@ -1,5 +1,6 @@
 # MONGO DB SETUP
 The software for JSON doc storage. 
+https://www.youtube.com/watch?v=D0U8vD8m1I0
 ## Install 
 - https://www.mongodb.com/try/download/community
 - On Premises
