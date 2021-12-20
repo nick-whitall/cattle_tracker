@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import User from '@/resources/user/user.interface';
+import Cattle from './cattle.interface';
 
 const CattleSchema = new Schema(
     {
@@ -11,4 +11,4 @@ const CattleSchema = new Schema(
     { timestamps: true }
 );
 
-export default model<User>('Cattle', CattleSchema);
+export default model<Cattle>('Cattle', CattleSchema);
