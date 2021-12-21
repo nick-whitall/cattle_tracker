@@ -11,9 +11,9 @@ https://www.youtube.com/watch?v=D0U8vD8m1I0
 
 # API App
 - I forked this from a tutorial https://www.youtube.com/watch?v=1o9YOHeKhNQ (/post and /user are just for reference and are not built by me)
-- Node 16.12.0 (using nvs for package management)
+- Using Node 16.12.0 (I am using nvs for package management)
 - npm install
-- create a .env file in root directory and you can use .env.example as a template
+- create a .env file in root directory and you can use .env.example as a template. These are used to talk to the db locally and should not be commited to source control
 - npm run dev (to serve... Also have a debugger option in launcher.json setup)
 - Once running you can import the "cattle_tracker.postman_collection.json" file into postman as it has an example query setup to create a livestock database object.
-- /livestock is a proof of concept. I obviously have no requirements or idea what the app does. Just
+- src/livestock is a proof of concept of a complex json datamodel being stored in a mongoDb
