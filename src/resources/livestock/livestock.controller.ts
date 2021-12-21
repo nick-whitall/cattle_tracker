@@ -26,18 +26,21 @@ class LivestockController implements Controller {
         );
     }
 
-    private create = (
+    private create = async (
         req: Request,
         res: Response,
         next: NextFunction
-    ): Response | void => {
-        console.log(req);
+    ): Promise<Response | void> => {
+        try {
+            const livestock = req.body;
 
-        this.livestockService.create('test');
+            const post = await this.livestockService.create(livestock);
 
-        res.status(200).send({ data: {} });
+            res.status(201).json({ post });
+        } catch (error) {
+            next(new HttpException(400, 'Cannot create post'));
+        }
     };
-
     private get = (
         req: Request,
         res: Response,

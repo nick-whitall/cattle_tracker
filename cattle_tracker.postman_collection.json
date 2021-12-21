@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "3a2ddadd-89f7-4baa-8409-b2f912f8991b",
+		"name": "cattle_tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postCattle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"cow\",\r\n    \"breed\": \"angus\",\r\n    \"description\": \"Angus cattle for sale\",\r\n    \"groupings\": [\r\n        {\r\n            \"groupRef\": \"Studs\",\r\n            \"description\": \"Bulls for reering\",\r\n            \"animals\": [\r\n                {\r\n                    \"animalRef\": \"ABC-123\",\r\n                    \"comment\": \"Main bull red tag\",\r\n                    \"isActive\": true,\r\n                    \"startDateTime\": \"2021-12-01\",\r\n                    \"tags\": [\r\n                        \"VACCINE-1\",\r\n                        \"VACCINE-2\"\r\n                    ]\r\n                },\r\n                   {\r\n                    \"animalRef\": \"DDD-123\",\r\n                    \"comment\": \"Young bull\",\r\n                    \"isActive\": true,\r\n                    \"startDateTime\": \"2021-12-03\",\r\n                    \"tags\": [\r\n                        \"VACCINE-1\"\r\n                    ]\r\n                }\r\n            ],\r\n            \"locations\": [\r\n                {\r\n                    \"locationRef\": \"PADDOCK A\",\r\n                    \"comment\": \"Paddock Behind Shed\",\r\n                    \"isActive\": true,\r\n                    \"startDateTime\": \"2021-12-01\"\r\n                },\r\n                {\r\n                    \"locationRef\": \"QUARINTINE PADDOCK\",\r\n                    \"comment\": \"Held in quarintine showing signs of illness\",\r\n                    \"isActive\": false,\r\n                    \"startDateTime\": \"2021-11-20\",\r\n                    \"endDateTime\": \"2021-11-30\"\r\n                }\r\n            ],\r\n            \"tags\": [\r\n                \"STOCK\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/livestock"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,5 @@
 import Livestock from './livestock.interface';
-import LivestockModel from './livestock.model';
+import LivestockModel, { ILivestock } from './livestock.model';
 
 class LivestockService {
     private livestock = LivestockModel;
@@ -7,9 +7,9 @@ class LivestockService {
     /**
      * Create a new post
      */
-    public async create(name: string): Promise<Livestock> {
+    public async create(livestockToCreate: ILivestock): Promise<Livestock> {
         try {
-            const post = await this.livestock.create({ name });
+            const post = await this.livestock.create(livestockToCreate);
 
             return post;
         } catch (error) {
@@ -19,7 +19,7 @@ class LivestockService {
 
     public async get(name: string): Promise<Livestock> {
         try {
-            const livestock = await this.livestock.findOne({name});
+            const livestock = await this.livestock.findOne({ name });
 
             if (livestock) {
                 return livestock as Livestock;
