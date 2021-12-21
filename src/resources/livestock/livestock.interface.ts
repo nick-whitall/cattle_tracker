@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
 
-export default interface Cattle extends Document {
+export default interface Livestock extends Document {
     name: string;
 }

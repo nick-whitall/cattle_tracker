@@ -2,13 +2,13 @@ import { Router, Request, Response, NextFunction } from 'express';
 import Controller from '@/utils/interfaces/controller.interface';
 import HttpException from '@/utils/exceptions/http.exception';
 import validationMiddleware from '@/middleware/validation.middleware';
-import validate from '@/resources/cattle/cattle.validation';
-import CattleService from './cattle.service';
+import validate from '@/resources/livestock/livestock.validation';
+import LivestockService from './livestock.service';
 
-class UserController implements Controller {
-    public path = '/cattle';
+class LivestockController implements Controller {
+    public path = '/livestock';
     public router = Router();
-    private CattleService = new CattleService();
+    private livestockService = new LivestockService();
 
     constructor() {
         this.initialiseRoutes();
@@ -25,15 +25,17 @@ class UserController implements Controller {
             this.get
         );
     }
-    
-    
+
     private create = (
         req: Request,
         res: Response,
         next: NextFunction
     ): Response | void => {
+        console.log(req);
 
-        res.status(200).send({ data: req.cattle });
+        this.livestockService.create('test');
+
+        res.status(200).send({ data: {} });
     };
 
     private get = (
@@ -41,12 +43,13 @@ class UserController implements Controller {
         res: Response,
         next: NextFunction
     ): Response | void => {
+        console.log('test');
         if (!req.user) {
             return next(new HttpException(404, 'No logged in user'));
         }
 
-        res.status(200).send({ data: req.cattle });
+        res.status(200).send({ data: {} });
     };
 }
 
-export default UserController;
+export default LivestockController;

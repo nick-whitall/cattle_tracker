@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "42crunch.vscode-openapi",
+    "arjun.swagger-viewer",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "wholroyd.jinja",
+    "redhat.vscode-yaml",
+  ]
+}

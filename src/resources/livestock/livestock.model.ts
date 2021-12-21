@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
-import Cattle from './cattle.interface';
+import Livestock from './livestock.interface';
 
-const CattleSchema = new Schema(
+const LivestockSchema = new Schema(
     {
         name: {
             type: String,
@@ -11,4 +11,4 @@ const CattleSchema = new Schema(
     { timestamps: true }
 );
 
-export default model<Cattle>('Cattle', CattleSchema);
+export default model<Livestock>('Livestock', LivestockSchema);
