@@ -1,5 +1,5 @@
 import Livestock from './livestock.interface';
-import LivestockModel, { ILivestock } from './livestock.model';
+import LivestockModel from './livestock.model';
 
 class LivestockService {
     private livestock = LivestockModel;
@@ -7,7 +7,7 @@ class LivestockService {
     /**
      * Create a new post
      */
-    public async create(livestockToCreate: ILivestock): Promise<Livestock> {
+    public async create(livestockToCreate: Livestock): Promise<Livestock> {
         try {
             const post = await this.livestock.create(livestockToCreate);
 

@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { AnimalTypes } from './livestock.model';
+import { AnimalTypes } from './livestock.interface';
 
 const locations = Joi.object({
     locationRef: Joi.string().required(),

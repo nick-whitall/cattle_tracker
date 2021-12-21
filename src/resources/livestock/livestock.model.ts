@@ -1,42 +1,5 @@
 import { Schema, model } from 'mongoose';
-import Livestock from './livestock.interface';
-
-export const AnimalTypes: string[] = [
-    'cow',
-    'goat',
-    'pig',
-    'chicken',
-    'sheep',
-];
-export type LocationReference = {
-    locationRef: string;
-    comment: string;
-    isActive: boolean;
-    startDateTime: string;
-    endDateTime: string;
-    tags: string[];
-}
-export type AnimalReference = {
-    animalRef: string;
-    comment: string;
-    isActive: boolean;
-    startDateTime: string;
-    endDateTime: string;
-    tags: string[];
-}
-export type LivestockGroup = {
-    groupRef: string;
-    description: string;
-    locations: LocationReference[];
-    animals: AnimalReference[];
-    tags: string[];
-}
-export interface ILivestock {
-    type: 'cow' | 'goat' | 'pig' | 'chicken' | 'sheep';
-    breed?: string;
-    description?: string;
-    groupings: LivestockGroup[];
-}
+import Livestock, { AnimalTypes } from './livestock.interface';
 
 
 
