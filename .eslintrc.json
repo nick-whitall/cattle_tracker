@@ -1,6 +1,5 @@
 {
   "env": {
-    "es6": true,
     "node": true
   },
   "extends": [
@@ -13,11 +12,10 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 5,
     "sourceType": "module",
     "project": [
       "tsconfig.json",
-      "tsconfig.spec.json"
     ]
   },
   "plugins": [
